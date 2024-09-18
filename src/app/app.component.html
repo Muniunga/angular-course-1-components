@@ -7,9 +7,9 @@
   {{rxjsCourse.description}}
 </h1> -->
 
-
+ 
 <div class="courses">
-  <app-course-card [course]="rxjsCourse"></app-course-card>
-  <app-course-card [course]="rgrxCourse"></app-course-card>
-  <app-course-card [course]="coreCourse"></app-course-card>
+  <app-course-card (courseSelected)="onCourseSelected($event)"  [course]="rxjsCourse"></app-course-card>
+  <app-course-card  (courseSelected)="onCourseSelected($event)" [course]="rgrxCourse"></app-course-card>
+  <app-course-card  (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></app-course-card>
 </div>

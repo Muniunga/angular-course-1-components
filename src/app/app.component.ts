@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import {COURSES} from '../db-data';
+import { COURSES } from '../db-data';
+
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,15 @@ import {COURSES} from '../db-data';
 })
 export class AppComponent {
 
-coreCourse = COURSES[0];
 
-rxjsCourse= COURSES[1];
-rgrxCourse= COURSES[2];
+  coreCourse = COURSES[0];
+
+  rxjsCourse = COURSES[1];
+  rgrxCourse = COURSES[2];
+
+
+  onCourseSelected(course:Course){
+    console.log("App component - click event bubled...", course);
+
+  }
 }
